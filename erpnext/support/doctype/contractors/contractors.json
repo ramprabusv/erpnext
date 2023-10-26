@@ -1,0 +1,202 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:AGKL-{department_code}-{####}",
+ "creation": "2023-10-26 12:31:19.707596",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "personnel_details",
+  "name_of_the_worker",
+  "qr_generator",
+  "worker_photo",
+  "worker_profile_photo",
+  "contact_number",
+  "aadhar_number",
+  "section_break_jfxd7",
+  "department_and_location_details",
+  "working_under",
+  "department_code",
+  "location_of_work",
+  "qr_code",
+  "section_break_wdzmw",
+  "amenities_request",
+  "breakfast",
+  "lunch",
+  "dinner",
+  "accommodation_request",
+  "power_request",
+  "transport_request"
+ ],
+ "fields": [
+  {
+   "fieldname": "personnel_details",
+   "fieldtype": "Heading",
+   "label": "Personnel Details"
+  },
+  {
+   "fieldname": "name_of_the_worker",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name of the worker",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "qr_generator",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "QR generator"
+  },
+  {
+   "fieldname": "worker_photo",
+   "fieldtype": "Attach Image",
+   "label": "Worker Photo",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "depends_on": "worker_photo",
+   "fieldname": "worker_profile_photo",
+   "fieldtype": "Image",
+   "label": "Worker profile photo",
+   "options": "worker_photo"
+  },
+  {
+   "default": "+91- ",
+   "fieldname": "contact_number",
+   "fieldtype": "Phone",
+   "label": "Contact number",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "aadhar_number",
+   "fieldtype": "Data",
+   "label": "Aadhar number",
+   "length": 12,
+   "reqd": 1,
+   "set_only_once": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "section_break_jfxd7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "department_and_location_details",
+   "fieldtype": "Heading",
+   "label": "Department and Location details"
+  },
+  {
+   "fieldname": "working_under",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Working under",
+   "options": "Maintenance Departments",
+   "remember_last_selected_value": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "working_under.code",
+   "fieldname": "department_code",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Department code"
+  },
+  {
+   "fieldname": "location_of_work",
+   "fieldtype": "Link",
+   "label": "Location of work",
+   "options": "Agnikul Locations",
+   "reqd": 1
+  },
+  {
+   "depends_on": "qr_generator",
+   "fieldname": "qr_code",
+   "fieldtype": "Image",
+   "label": "QR code",
+   "options": "qr_generator",
+   "print_width": "100"
+  },
+  {
+   "fieldname": "section_break_wdzmw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amenities_request",
+   "fieldtype": "Heading",
+   "label": "Amenities request"
+  },
+  {
+   "default": "0",
+   "fieldname": "breakfast",
+   "fieldtype": "Check",
+   "label": "Breakfast"
+  },
+  {
+   "default": "0",
+   "fieldname": "lunch",
+   "fieldtype": "Check",
+   "label": "Lunch"
+  },
+  {
+   "default": "0",
+   "fieldname": "dinner",
+   "fieldtype": "Check",
+   "label": "Dinner"
+  },
+  {
+   "default": "No",
+   "depends_on": "eval:doc.working_under==\"Fabricator\" && doc.location_of_work==\"SHAR\";",
+   "fieldname": "accommodation_request",
+   "fieldtype": "Select",
+   "label": "Accommodation request",
+   "options": "Yes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.working_under==\"Fabricator\" && doc.location_of_work==\"SHAR\";",
+   "fieldname": "power_request",
+   "fieldtype": "Table",
+   "label": "Power request",
+   "options": "power_request"
+  },
+  {
+   "default": "No",
+   "depends_on": "eval:doc.working_under==\"Fabricator\" && doc.location_of_work==\"SHAR\";",
+   "fieldname": "transport_request",
+   "fieldtype": "Select",
+   "label": "Transport request",
+   "options": "Yes\nNo"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-26 12:52:10.403270",
+ "modified_by": "Administrator",
+ "module": "Support",
+ "name": "Contractors",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "name_of_the_worker",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
