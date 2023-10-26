@@ -12,6 +12,7 @@
   "subject_section",
   "naming_series",
   "subject",
+  "agnikul_location",
   "customer",
   "raised_by",
   "cb00",
@@ -132,7 +133,7 @@
    "fieldname": "issue_type",
    "fieldtype": "Link",
    "label": "Issue Type",
-   "options": "Issue Type"
+   "options": "Maintenance Departments"
   },
   {
    "collapsible": 1,
@@ -205,12 +206,14 @@
   {
    "fieldname": "lead",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Lead",
    "options": "Lead"
   },
   {
    "fieldname": "contact",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Contact",
    "options": "Contact"
   },
@@ -228,6 +231,7 @@
    "bold": 1,
    "fieldname": "customer_name",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Customer Name",
    "oldfieldname": "customer_name",
    "oldfieldtype": "Data",
@@ -236,12 +240,14 @@
   {
    "fieldname": "project",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Project",
    "options": "Project"
   },
   {
    "fieldname": "company",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Company",
    "options": "Company",
    "print_hide": 1
@@ -386,12 +392,18 @@
    "fieldtype": "Duration",
    "label": "First Response Time",
    "read_only": 1
+  },
+  {
+   "fieldname": "agnikul_location",
+   "fieldtype": "Link",
+   "label": "Agnikul Location",
+   "options": "Agnikul Locations"
   }
  ],
  "icon": "fa fa-ticket",
  "idx": 7,
  "links": [],
- "modified": "2021-11-24 13:13:10.276630",
+ "modified": "2023-10-26 12:22:10.949374",
  "modified_by": "Administrator",
  "module": "Support",
  "name": "Issue",
@@ -415,6 +427,7 @@
  "sender_field": "raised_by",
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "subject_field": "subject",
  "timeline_field": "customer",
  "title_field": "subject",
