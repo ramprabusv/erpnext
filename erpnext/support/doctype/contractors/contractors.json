@@ -1,4 +1,5 @@
 {
+ "_user_tags": ",agkl",
  "actions": [],
  "allow_rename": 1,
  "autoname": "format:AGKL-{department_code}-{####}",
@@ -41,8 +42,7 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Name of the worker",
-   "reqd": 1,
-   "set_only_once": 1
+   "reqd": 1
   },
   {
    "fieldname": "qr_generator",
@@ -161,7 +161,7 @@
    "fieldname": "power_request",
    "fieldtype": "Table",
    "label": "Power request",
-   "options": "power_request"
+   "options": "Power request"
   },
   {
    "default": "No",
@@ -174,7 +174,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-26 12:52:10.403270",
+ "modified": "2023-10-26 15:40:18.218614",
  "modified_by": "Administrator",
  "module": "Support",
  "name": "Contractors",
