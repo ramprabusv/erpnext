@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{name_worker}-{DD}-{MM}-{YY}",
+ "creation": "2023-10-26 13:08:04.581536",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "worker_code",
+  "name_worker",
+  "working_department",
+  "location_of_work",
+  "contact_number",
+  "attendance_date",
+  "in_time",
+  "out_time"
+ ],
+ "fields": [
+  {
+   "fieldname": "worker_code",
+   "fieldtype": "Link",
+   "label": "Worker QR",
+   "options": "Contractors",
+   "unique": 1
+  },
+  {
+   "fetch_from": "worker_code.name_of_the_worker",
+   "fieldname": "name_worker",
+   "fieldtype": "Data",
+   "label": "Name of the worker",
+   "read_only": 1
+  },
+  {
+   "depends_on": "name_of_the_worker",
+   "fetch_from": "worker_code.working_under",
+   "fetch_if_empty": 1,
+   "fieldname": "working_department",
+   "fieldtype": "Link",
+   "label": "Working department",
+   "options": "Issue Type",
+   "read_only": 1
+  },
+  {
+   "depends_on": "name_of_the_worker",
+   "fetch_from": "worker_code.location_of_work",
+   "fieldname": "location_of_work",
+   "fieldtype": "Link",
+   "label": "Location of work",
+   "options": "Agnikul Locations",
+   "read_only": 1
+  },
+  {
+   "depends_on": "name_of_the_worker",
+   "fetch_from": "worker_code.contact_number",
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact number",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "attendance_date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "in_time",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "In Time"
+  },
+  {
+   "fieldname": "out_time",
+   "fieldtype": "Data",
+   "label": "Out Time"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-26 13:08:04.581536",
+ "modified_by": "Administrator",
+ "module": "Support",
+ "name": "Contractor Attendance",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
