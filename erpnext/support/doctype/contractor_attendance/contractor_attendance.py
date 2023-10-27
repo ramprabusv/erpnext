@@ -8,23 +8,37 @@ from frappe.model.document import Document
 class ContractorAttendance(Document):
 	# pass
 	@frappe.whitelist()
-	def frm_call(self,name_worker):
+	def frm_call(self,name_worker,entry_or_exit):
 		
-		if(frappe.db.exists("Contractors",name_worker)):
-			if (frappe.db.exists("Contractor Attendance",name_worker+'-'+frappe.utils.nowdate())):				
-				doc = frappe.get_doc("Contractor Attendance", name_worker+'-'+frappe.utils.nowdate())
-				if doc.out_time==None:
-					doc.out_time=frappe.utils.now().split()[1][:5]
-				doc.save()
-				return "Exit"
+		if entry_or_exit=="Entry":
+			if(frappe.db.exists("Contractors",name_worker)):
+				if (frappe.db.exists("Contractor Attendance",name_worker+'-'+frappe.utils.nowdate())):
+					return "Already marked for the day"
+				else:
+					doc = frappe.new_doc("Contractor Attendance")
+					doc.worker_code=name_worker
+					if doc.in_time==None:
+						doc.in_time=frappe.utils.now().split()[1][:5]
+					
+					doc.insert()
 			else:
-				doc = frappe.new_doc("Contractor Attendance")
-				doc.worker_code=name_worker
-				if doc.in_time==None:
-					doc.in_time=frappe.utils.now().split()[1][:5]
-				doc.insert()
-				return "Entry"
+				return "Please check QR"
+			
+			return "Attendance Marked"
+			
 		else:
-			return "Nope"
+			if(frappe.db.exists("Contractors",name_worker)):
+				if (frappe.db.exists("Contractor Attendance",name_worker+'-'+frappe.utils.nowdate())):				
+					doc = frappe.get_doc("Contractor Attendance", name_worker+'-'+frappe.utils.nowdate())
+					if doc.out_time==None:
+						doc.out_time=frappe.utils.now().split()[1][:5]
+					else:
+						return "Already marked for the day"
+					doc.save()
+					return "Attendance Marked"
+				else:
+					return "Please mark entry first"
+			else:
+				return "Please check QR"
 
 
