@@ -45,7 +45,8 @@ frappe.ui.form.on('Contractor Attendance', {
 
 
 
-                                }
+                                },
+                                css: `<style>.frappe-ui-scanner { background-color: #ffffff; }</style>`,
                             });
 
                         }
