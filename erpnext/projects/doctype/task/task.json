@@ -8,6 +8,7 @@
  "engine": "InnoDB",
  "field_order": [
   "subject",
+  "agnikul_location",
   "project",
   "issue",
   "type",
@@ -69,6 +70,7 @@
    "bold": 1,
    "fieldname": "project",
    "fieldtype": "Link",
+   "hidden": 1,
    "in_global_search": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
@@ -96,6 +98,7 @@
    "default": "0",
    "fieldname": "is_group",
    "fieldtype": "Check",
+   "hidden": 1,
    "in_list_view": 1,
    "label": "Is Group"
   },
@@ -138,6 +141,7 @@
    "bold": 1,
    "fieldname": "parent_task",
    "fieldtype": "Link",
+   "hidden": 1,
    "ignore_user_permissions": 1,
    "label": "Parent Task",
    "options": "Task",
@@ -169,6 +173,7 @@
    "fetch_from": "type.weight",
    "fieldname": "task_weight",
    "fieldtype": "Float",
+   "hidden": 1,
    "label": "Weight"
   },
   {
@@ -187,6 +192,7 @@
   {
    "fieldname": "progress",
    "fieldtype": "Percent",
+   "hidden": 1,
    "label": "% Progress",
    "no_copy": 1
   },
@@ -194,6 +200,7 @@
    "default": "0",
    "fieldname": "is_milestone",
    "fieldtype": "Check",
+   "hidden": 1,
    "in_list_view": 1,
    "label": "Is Milestone"
   },
@@ -268,11 +275,13 @@
    "collapsible": 1,
    "fieldname": "sb_costing",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Costing"
   },
   {
    "fieldname": "total_costing_amount",
    "fieldtype": "Currency",
+   "hidden": 1,
    "label": "Total Costing Amount (via Timesheet)",
    "oldfieldname": "actual_budget",
    "oldfieldtype": "Currency",
@@ -286,6 +295,7 @@
   {
    "fieldname": "total_billing_amount",
    "fieldtype": "Currency",
+   "hidden": 1,
    "label": "Total Billable Amount (via Timesheet)",
    "read_only": 1
   },
@@ -293,12 +303,14 @@
    "collapsible": 1,
    "fieldname": "sb_more_info",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "More Info"
   },
   {
    "depends_on": "eval:doc.status == \"Closed\" || doc.status == \"Pending Review\"",
    "fieldname": "review_date",
    "fieldtype": "Date",
+   "hidden": 1,
    "label": "Review Date",
    "oldfieldname": "review_date",
    "oldfieldtype": "Date"
@@ -307,6 +319,7 @@
    "depends_on": "eval:doc.status == \"Closed\"",
    "fieldname": "closing_date",
    "fieldtype": "Date",
+   "hidden": 1,
    "label": "Closing Date",
    "oldfieldname": "closing_date",
    "oldfieldtype": "Date"
@@ -318,6 +331,7 @@
   {
    "fieldname": "department",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Department",
    "options": "Department"
   },
@@ -325,6 +339,7 @@
    "fetch_from": "project.company",
    "fieldname": "company",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Company",
    "options": "Company",
    "remember_last_selected_value": 1
@@ -355,6 +370,7 @@
    "depends_on": "eval: doc.status == \"Completed\"",
    "fieldname": "completed_by",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Completed By",
    "no_copy": 1,
    "options": "User"
@@ -363,6 +379,7 @@
    "default": "0",
    "fieldname": "is_template",
    "fieldtype": "Check",
+   "hidden": 1,
    "label": "Is Template"
   },
   {
@@ -389,6 +406,12 @@
    "fieldtype": "Data",
    "hidden": 1,
    "label": "Template Task"
+  },
+  {
+   "fieldname": "agnikul_location",
+   "fieldtype": "Link",
+   "label": "Agnikul Location",
+   "options": "Agnikul Locations"
   }
  ],
  "icon": "fa fa-check",
@@ -396,7 +419,7 @@
  "is_tree": 1,
  "links": [],
  "max_attachments": 5,
- "modified": "2023-09-28 13:52:05.861175",
+ "modified": "2023-10-28 11:09:07.587326",
  "modified_by": "Administrator",
  "module": "Projects",
  "name": "Task",

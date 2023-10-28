@@ -1,9 +1,32 @@
 // Copyright (c) 2023, Frappe Technologies Pvt. Ltd. and contributors
 // For license information, please see license.txt
-
-// frappe.ui.form.on("Contractors", {
-//     refresh(frm) {
-        
+// frappe.ui.form.on("Contractors", "refresh", function(frm) {
+    // Create a new QR code scanner.
+    // var scanner = new Html5QrcodeScanner("qr-reader");
+  
+    // // Add an event listener for the `scan` event.
+    // scanner.addEventListener("scan", function(event) {
+    //   // Get the scanned QR code.
+    //   var decodedText = event.detail.decodedText;
+  
+    //   // Make an API call to store the scanned QR code in the Frappe database.
+    //   frappe.ui.form.get_active_form().call({
+    //     method: "frm_call",
+    //     args: {
+    //       qr_code: decodedText
+    //     },
+    //     callback: function(response) {
+    //       // Handle the response.
+    //       frappe.msgprint(response.message);
+    //     }
+    //   });
+    // });
+  
+    // // Start the scanner.
+    // scanner.start();
+//   });
+  
+      
 
         // Create a new Frappe scanner instance inside the custom container
         // const scanVar = new frappe.ui.Scanner({

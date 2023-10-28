@@ -1,5 +1,4 @@
 {
- "_user_tags": ",agkl",
  "actions": [],
  "allow_rename": 1,
  "autoname": "format:AGKL-{department_code}-{####}",
@@ -9,34 +8,40 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "personnel_details",
+  "personnel_details_tab",
+  "personnel_details_column",
   "name_of_the_worker",
   "qr_generator",
-  "worker_photo",
-  "worker_profile_photo",
+  "current_address",
   "contact_number",
   "aadhar_number",
+  "department_and_location_details_tab",
   "section_break_jfxd7",
-  "department_and_location_details",
   "working_under",
   "department_code",
   "location_of_work",
+  "worker_photo",
+  "section_break_vrdz",
+  "worker_profile_photo",
+  "column_break_jkxv",
   "qr_code",
   "section_break_wdzmw",
-  "amenities_request",
   "breakfast",
+  "column_break_jzgj",
   "lunch",
+  "column_break_tgjh",
   "dinner",
+  "column_break_xnro",
+  "column_break_zrvy",
+  "column_break_tcvk",
+  "column_break_qrsu",
+  "column_break_kpyi",
+  "section_break_tvcv",
   "accommodation_request",
-  "power_request",
-  "transport_request"
+  "transport_request",
+  "power_request"
  ],
  "fields": [
-  {
-   "fieldname": "personnel_details",
-   "fieldtype": "Heading",
-   "label": "Personnel Details"
-  },
   {
    "fieldname": "name_of_the_worker",
    "fieldtype": "Data",
@@ -83,11 +88,7 @@
   },
   {
    "fieldname": "section_break_jfxd7",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "department_and_location_details",
-   "fieldtype": "Heading",
+   "fieldtype": "Column Break",
    "label": "Department and Location details"
   },
   {
@@ -114,6 +115,7 @@
    "reqd": 1
   },
   {
+   "columns": 2,
    "depends_on": "qr_generator",
    "fieldname": "qr_code",
    "fieldtype": "Image",
@@ -124,11 +126,6 @@
   {
    "fieldname": "section_break_wdzmw",
    "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "amenities_request",
-   "fieldtype": "Heading",
-   "label": "Amenities request"
   },
   {
    "default": "0",
@@ -170,11 +167,72 @@
    "fieldtype": "Select",
    "label": "Transport request",
    "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "personnel_details_column",
+   "fieldtype": "Column Break",
+   "label": "Personnel Details"
+  },
+  {
+   "fieldname": "column_break_jzgj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_tgjh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xnro",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_zrvy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_tcvk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qrsu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_kpyi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_tvcv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_vrdz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_jkxv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "personnel_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Personnel Details"
+  },
+  {
+   "fieldname": "current_address",
+   "fieldtype": "Small Text",
+   "label": "Current Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department_and_location_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Work details"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-26 15:40:18.218614",
+ "modified": "2023-10-28 12:38:49.867483",
  "modified_by": "Administrator",
  "module": "Support",
  "name": "Contractors",

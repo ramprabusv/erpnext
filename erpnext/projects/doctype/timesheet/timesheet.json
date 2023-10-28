@@ -18,6 +18,9 @@
   "column_break_3",
   "status",
   "parent_project",
+  "task",
+  "contractor_detail_section",
+  "contractor",
   "employee_detail",
   "employee",
   "employee_name",
@@ -67,6 +70,7 @@
   {
    "fieldname": "company",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Company",
    "options": "Company",
    "remember_last_selected_value": 1
@@ -103,6 +107,7 @@
   {
    "fieldname": "employee",
    "fieldtype": "Link",
+   "hidden": 1,
    "in_standard_filter": 1,
    "label": "Employee",
    "options": "Employee"
@@ -179,6 +184,7 @@
    "collapsible": 1,
    "fieldname": "billing_details",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Billing Details",
    "permlevel": 1
   },
@@ -186,6 +192,7 @@
    "allow_on_submit": 1,
    "fieldname": "total_billable_hours",
    "fieldtype": "Float",
+   "hidden": 1,
    "label": "Total Billable Hours",
    "print_hide": 1,
    "read_only": 1
@@ -194,6 +201,7 @@
    "allow_on_submit": 1,
    "fieldname": "total_billed_hours",
    "fieldtype": "Float",
+   "hidden": 1,
    "label": "Total Billed Hours",
    "print_hide": 1,
    "read_only": 1
@@ -202,6 +210,7 @@
    "allow_on_submit": 1,
    "fieldname": "total_costing_amount",
    "fieldtype": "Currency",
+   "hidden": 1,
    "label": "Total Costing Amount",
    "options": "currency",
    "print_hide": 1,
@@ -216,6 +225,7 @@
    "default": "0",
    "fieldname": "total_billable_amount",
    "fieldtype": "Currency",
+   "hidden": 1,
    "label": "Total Billable Amount",
    "options": "currency",
    "read_only": 1
@@ -224,6 +234,7 @@
    "allow_on_submit": 1,
    "fieldname": "total_billed_amount",
    "fieldtype": "Currency",
+   "hidden": 1,
    "label": "Total Billed Amount",
    "options": "currency",
    "print_hide": 1,
@@ -233,6 +244,7 @@
    "allow_on_submit": 1,
    "fieldname": "per_billed",
    "fieldtype": "Percent",
+   "hidden": 1,
    "in_list_view": 1,
    "label": "% Amount Billed",
    "no_copy": 1,
@@ -261,12 +273,14 @@
   {
    "fieldname": "parent_project",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Project",
    "options": "Project"
   },
   {
    "fieldname": "customer",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Customer",
    "options": "Customer"
   },
@@ -275,12 +289,14 @@
    "fetch_if_empty": 1,
    "fieldname": "currency",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Currency",
    "options": "Currency"
   },
   {
    "fieldname": "base_total_costing_amount",
    "fieldtype": "Currency",
+   "hidden": 1,
    "label": "Base Total Costing Amount",
    "print_hide": 1,
    "read_only": 1
@@ -288,6 +304,7 @@
   {
    "fieldname": "base_total_billable_amount",
    "fieldtype": "Currency",
+   "hidden": 1,
    "label": "Base Total Billable Amount",
    "print_hide": 1,
    "read_only": 1
@@ -295,6 +312,7 @@
   {
    "fieldname": "base_total_billed_amount",
    "fieldtype": "Currency",
+   "hidden": 1,
    "label": "Base Total Billed Amount",
    "print_hide": 1,
    "read_only": 1
@@ -303,14 +321,33 @@
    "default": "1",
    "fieldname": "exchange_rate",
    "fieldtype": "Float",
+   "hidden": 1,
    "label": "Exchange Rate"
+  },
+  {
+   "fieldname": "contractor",
+   "fieldtype": "Table",
+   "label": "Contractor",
+   "options": "Timesheet Contractors Details"
+  },
+  {
+   "bold": 1,
+   "fieldname": "contractor_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Contractor Detail"
+  },
+  {
+   "fieldname": "task",
+   "fieldtype": "Link",
+   "label": "Task",
+   "options": "Task"
   }
  ],
  "icon": "fa fa-clock-o",
  "idx": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-04-20 15:59:11.107831",
+ "modified": "2023-10-28 11:58:14.750843",
  "modified_by": "Administrator",
  "module": "Projects",
  "name": "Timesheet",
@@ -386,6 +423,7 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "ASC",
  "states": [],
