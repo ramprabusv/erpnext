@@ -1,17 +1,17 @@
 // // Copyright (c) 2023, Frappe Technologies Pvt. Ltd. and contributors
 // // For license information, please see license.txt
 
-frappe.ui.form.on("Contractors", {
-refresh (frm) {
-    frm.call({
-        doc:frm.doc,
-        method: 'frm_call',
-        callback: function(r){
-            frappe.msgprint(r.message)
-        }
-    });
-}
-})
+// frappe.ui.form.on("Contractors", {
+// refresh (frm) {
+//     frm.call({
+//         doc:frm.doc,
+//         method: 'frm_call',
+//         callback: function(r){
+//             frappe.msgprint(r.message)
+//         }
+//     });
+// }
+// })
    
 //     // frappe.msgprint(
 //     //     `

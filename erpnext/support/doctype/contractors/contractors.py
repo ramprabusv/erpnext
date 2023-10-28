@@ -12,7 +12,7 @@ class Contractors(Document):
 		self.qr_generator = f"https://api.qrserver.com/v1/create-qr-code/?size=500x500&data={self.name}"
 		self.name_of_the_worker=self.name_of_the_worker.upper()
 
-	@frappe.whitelist()
-	def frm_call(self):
-		return "Hi"
+	# @frappe.whitelist()
+	# def frm_call(self):
+	# 	return "Hi"
 	
