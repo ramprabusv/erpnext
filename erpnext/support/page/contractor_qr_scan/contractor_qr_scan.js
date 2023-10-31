@@ -1,13 +1,14 @@
 frappe.pages['contractor-qr-scan'].on_page_load = function(wrapper) {
 	var page = frappe.ui.make_app_page({
 		parent: wrapper,
-		title: 'SVR',
+		// title: 'SVR',
 		single_column: true
 	});
 	$(frappe.render_template("contractor_qr_scan",{
-		qr_code:"Hiiiiii SVR"
+		// qr_code:"Hiiiiii SVR"
 	})).appendTo(page.body);
 
+	let $btn = page.set_primary_action('Go home',() => window.location.href ="http://127.0.0.1:8000/app/agkl-contractors")
 	// frappe.ready(function () {
 	// 	frappe.msgprint("Helloooo")
 	// });
@@ -29,6 +30,10 @@ frappe.pages['contractor-qr-scan'].on_page_load = function(wrapper) {
 					},
 					callback: function (r) {
 						frappe.msgprint(r.message)
+						setTimeout(function () {
+							window.location.href = 'http://127.0.0.1:8000/app/agkl-contractors';
+
+						}, 2000);
 					}
 				});
 			});
@@ -60,6 +65,11 @@ frappe.pages['contractor-qr-scan'].on_page_load = function(wrapper) {
 					},
 					callback: function (r) {
 						frappe.msgprint(r.message)
+						setTimeout(function () {
+							window.location.href = 'http://127.0.0.1:8000/app/agkl-contractors';
+
+						}, 2000);
+
 					}
 				});
 			});

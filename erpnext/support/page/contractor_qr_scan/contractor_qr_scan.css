@@ -1,29 +1,4 @@
-.hero-section {
-    background-image: url('https://i.gadgets360cdn.com/large/agnikul_cosmos_2_1635943291219.jpg'); /* Replace with your image URL */
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    padding: 100px 0;
-    color: #000000;
-}
 
-.maintenance-para {
-    text-align: left;
-    font-size: 18px;
-    max-width: 50%;
-
-
-}
-/* CSS for the buttons */
-.hero-button {
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    padding: 15px 30px;
-    margin: 10px;
-    font-size: 18px;
-    cursor: pointer;
-}
 
 #preview {
     /* width: 100%; */
@@ -68,16 +43,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* 100% viewport height for vertical centering */
+    text-align: center;
+            padding-top: 60px;
+    /* height: 60vh;  */
+    /* 100% viewport height for vertical centering */
 }
 
 /* CSS for the buttons */
 .entry-button, .exit-button {
-    background-color: #007BFF;
+    background-color: #06a01d;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    margin: 5px;
+    padding: 20px 20px;
+    border: 2px solid #333;
+    border-radius: 20px;
+    /* margin: 5px; */
     cursor: pointer;
     width: 300px; /* Adjust as needed */
     height: 300px; /* Adjust as needed */
@@ -86,4 +66,13 @@
 /* Add some spacing between the buttons */
 .entry-button {
     margin-right: 10px;
+}
+
+
+.entry-exit-buttons{
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0zMDktYWRqLTA1LmpwZw.jpg'); /* Replace with your image URL */
+    height: 800px;
 }
