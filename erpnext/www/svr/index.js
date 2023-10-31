@@ -1,14 +1,6 @@
-frappe.pages['contractor-qr-scan'].on_page_load = function(wrapper) {
-	var page = frappe.ui.make_app_page({
-		parent: wrapper,
-		title: 'All Agnikul Contractors can mark their attendance here',
-		single_column: true
-	});
-	$(frappe.render_template("contractor_qr_scan",{
-		// qr_code:"Hiiiiii SVR"
-	})).appendTo(page.body);
+// console.log('Hi')
 
-	let $btn = page.set_primary_action('Go home',() => window.location.href ="http://127.0.0.1:8000/app/agkl-contractors")
+// let $btn = page.set_primary_action('Go home',() => window.location.href ="http://127.0.0.1:8000/app/agkl-contractors")
 	// frappe.ready(function () {
 	// 	frappe.msgprint("Helloooo")
 	// });
@@ -21,7 +13,7 @@ frappe.pages['contractor-qr-scan'].on_page_load = function(wrapper) {
 				// Redirect to the result page with the scanned data as a query parameter
 				// window.location.href = '/result?data=' + content;
 				frappe.call({
-					method: 'erpnext.support.page.contractor_qr_scan.contractor_qr_scan.qr_code_tx',
+					method: 'erpnext.www.svr.index.qr_code_tx',
 					args: {
 						name_worker: content,
 						entry_or_exit: "Entry",
@@ -57,7 +49,7 @@ frappe.pages['contractor-qr-scan'].on_page_load = function(wrapper) {
 				// Redirect to the result page with the scanned data as a query parameter
 				// window.location.href = '/result?data=' + content;
 				frappe.call({
-					method: 'erpnext.support.page.contractor_qr_scan.contractor_qr_scan.qr_code_tx',
+					method: 'erpnext.www.svr.index.qr_code_tx',
 					args: {
 						name_worker: content,
 						entry_or_exit: "Exit",
@@ -87,14 +79,3 @@ frappe.pages['contractor-qr-scan'].on_page_load = function(wrapper) {
 		videoOverlay.addEventListener("click", function() {
             videoOverlay.style.display = "none";
         });
-
-		
-	// let field = page.add_field({
-	// 	label:'attendance',
-	// 	fieldtype: 'Button',
-	// 	fieldname: 'attendance_cont',
-	// action() {
-	// 		console.log(1);
-	// 	}
-	// });
-}

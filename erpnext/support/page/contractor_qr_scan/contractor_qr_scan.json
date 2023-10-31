@@ -4,7 +4,7 @@
  "docstatus": 0,
  "doctype": "Page",
  "idx": 0,
- "modified": "2023-10-30 19:34:56.851290",
+ "modified": "2023-10-31 19:06:50.706561",
  "modified_by": "Administrator",
  "module": "Support",
  "name": "contractor-qr-scan",
@@ -14,6 +14,6 @@
  "script": null,
  "standard": "Yes",
  "style": null,
- "system_page": 1,
+ "system_page": 0,
  "title": "QR Scanner for Contractor Attendance"
 }

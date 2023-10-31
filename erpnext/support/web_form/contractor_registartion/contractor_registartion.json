@@ -8,7 +8,7 @@
  "anonymous": 0,
  "apply_document_permissions": 0,
  "button_label": "Register",
- "client_script": "frappe.web_form.after_load = () => {\n\n\nfrappe.msgprint(\"Hi\");\n\n\n}\n",
+ "client_script": "",
  "condition_json": "[]",
  "creation": "2023-10-28 12:23:59.592435",
  "custom_css": "",
@@ -52,12 +52,17 @@
    "fieldname": "dinner",
    "fieldtype": "Check",
    "label": "Dinner"
+  },
+  {
+   "fieldname": "qr_generator",
+   "fieldtype": "Attach Image",
+   "label": "QR generator"
   }
  ],
  "list_title": "Contractors",
  "login_required": 1,
  "max_attachment_size": 10,
- "modified": "2023-10-31 15:16:54.070601",
+ "modified": "2023-10-31 23:14:21.103757",
  "modified_by": "Administrator",
  "module": "Support",
  "name": "contractor-registartion",
@@ -375,6 +380,18 @@
    "max_value": 0,
    "options": "Power request",
    "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "qr_generator",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "QR generator",
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 1,
    "reqd": 0,
    "show_in_filter": 0
   }

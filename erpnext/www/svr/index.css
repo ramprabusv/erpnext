@@ -1,0 +1,78 @@
+
+
+#preview {
+    /* width: 100%; */
+    /* max-width: 500px; */
+    border: 2px solid #333;
+    border-radius: 20px;
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); */
+    /* align-items: center; */
+    display: flex;
+    margin: 0 auto;
+    max-width: 80%;
+    max-height: 80%;
+    /* Centers the element horizontally */
+}
+
+
+#previewContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    /* margin-top: 5%; */
+
+}
+
+#videoOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    /* display: flex; */
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+            padding-top: 60px;
+    /* height: 60vh;  */
+    /* 100% viewport height for vertical centering */
+}
+
+/* CSS for the buttons */
+.entry-button, .exit-button {
+    background-color: #06a01d;
+    color: #fff;
+    border: none;
+    padding: 20px 20px;
+    border: 2px solid #333;
+    border-radius: 20px;
+    /* margin: 5px; */
+    cursor: pointer;
+    width: 300px; /* Adjust as needed */
+    height: 300px; /* Adjust as needed */
+}
+
+/* Add some spacing between the buttons */
+.entry-button {
+    margin-right: 10px;
+}
+
+
+.entry-exit-buttons{
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url('https://img.freepik.com/free-vector/abstract-white-shapes-background_79603-1362.jpg?w=2000&t=st=1698782188~exp=1698782788~hmac=739707c2939c57abc35efe1ed1792bbbd0491e4fccf9c1eebab7e1c97270e170'); /* Replace with your image URL */
+    height: 100%;
+}

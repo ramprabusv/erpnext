@@ -4,16 +4,20 @@
  "docstatus": 0,
  "doctype": "Page",
  "idx": 0,
- "modified": "2023-10-31 12:16:02.251345",
+ "modified": "2023-10-31 19:20:40.132380",
  "modified_by": "Administrator",
  "module": "Support",
  "name": "agkl-contractors",
  "owner": "Administrator",
  "page_name": "agkl-contractors",
- "roles": [],
+ "roles": [
+  {
+   "role": "Security"
+  }
+ ],
  "script": null,
  "standard": "Yes",
  "style": null,
- "system_page": 1,
+ "system_page": 0,
  "title": ""
 }

@@ -4,15 +4,19 @@
  "docstatus": 0,
  "doctype": "Page",
  "idx": 0,
- "modified": "2023-10-31 13:40:50.296267",
+ "modified": "2023-10-31 19:25:08.883205",
  "modified_by": "Administrator",
  "module": "Support",
  "name": "contractors-list",
  "owner": "Administrator",
  "page_name": "contractors-list",
- "roles": [],
+ "roles": [
+  {
+   "role": "Security"
+  }
+ ],
  "script": null,
  "standard": "Yes",
  "style": null,
- "system_page": 1
+ "system_page": 0
 }
