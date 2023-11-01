@@ -44,35 +44,61 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-            padding-top: 60px;
+    padding-top: 0px;
     /* height: 60vh;  */
     /* 100% viewport height for vertical centering */
 }
 
 /* CSS for the buttons */
-.entry-button, .exit-button {
-    background-color: #06a01d;
+.entry-button, .exit-button{
+    background-color: #5C8A58;
     color: #fff;
     border: none;
-    padding: 20px 20px;
-    border: 2px solid #333;
+    box-shadow: 5px 5px 20px rgba(43, 71, 0, 0.7);
+
+    padding: 10px 10px;
     border-radius: 20px;
-    /* margin: 5px; */
     cursor: pointer;
-    width: 300px; /* Adjust as needed */
-    height: 300px; /* Adjust as needed */
+    block-size: 350px;
+
+
 }
+ 
+    /* border: 2px solid #333; */
+    /* border-radius: 20px; */
+    /* margin: 5px; */
+    /* width: 300px;  */
+    /* height: 400px;  */
+
 
 /* Add some spacing between the buttons */
 .entry-button {
     margin-right: 10px;
 }
 
+.logo_div img{
+    margin: 30px 30px;
+}
+.tamil_heading{
+    text-align: center;
+    margin-top: 5px;
+}
 
-.entry-exit-buttons{
-    background-size: cover;
+/* .entry-exit-buttons */
+
+body{
+    /* background-size: auto;  */
+    /* cover; */
     background-position: center;
-    background-attachment: fixed;
-    background-image: url('https://img.freepik.com/free-vector/abstract-white-shapes-background_79603-1362.jpg?w=2000&t=st=1698782188~exp=1698782788~hmac=739707c2939c57abc35efe1ed1792bbbd0491e4fccf9c1eebab7e1c97270e170'); /* Replace with your image URL */
-    height: 100%;
+    /* 0px 0px; */
+    /* background-attachment: fixed; */
+    background-image: url('/assets/erpnext/images/T-FRAME.svg'); /* Replace with your image URL Desktop.svg*/
+    /* height: 100%; */
+    background-size: cover;
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* animation: slideshow 10s infinite; */
+    /* font-family: Arial, sans-serif; */
+    margin: 0;
+    padding: 0;
 }

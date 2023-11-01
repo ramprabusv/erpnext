@@ -6,7 +6,7 @@ def qr_code_tx(name_worker,entry_or_exit):
     if entry_or_exit=="Entry":
         if(frappe.db.exists("Contractors",name_worker)):
             if (frappe.db.exists("Contractor Attendance",name_worker+'-'+frappe.utils.nowdate())):
-                return "Already marked for the day"
+                return "Already marked Entry attendance for the day"
             else:
                 doc = frappe.new_doc("Contractor Attendance")
                 doc.worker_code=name_worker
@@ -15,9 +15,9 @@ def qr_code_tx(name_worker,entry_or_exit):
                 
                 doc.insert()
         else:
-            return "Please check QR"
+            return "Please check QR code"
         
-        return "Attendance Marked"
+        return "Entry Attendance Marked"
 			
     else:
         if(frappe.db.exists("Contractors",name_worker)):
@@ -26,10 +26,10 @@ def qr_code_tx(name_worker,entry_or_exit):
                 # if doc.out_time==None:
                 doc.out_time=frappe.utils.now()[:18]#.split()[1][:5]
             else:
-                return "Already marked for the day"
+                return "Already marked Exit attendance for the day"
             doc.save()
-            return "Attendance Marked"
+            return "Exit Attendance Marked"
             # else:
             #     return "Please mark entry first"
         else:
-            return "Please check QR"
+            return "Please check QR code"

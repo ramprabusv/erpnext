@@ -3,9 +3,18 @@
  "creation": "2023-10-28 15:35:27.927795",
  "docstatus": 0,
  "doctype": "Web Template",
- "fields": [],
+ "fields": [
+  {
+   "__unsaved": 1,
+   "fieldname": "login",
+   "fieldtype": "Link",
+   "label": "Login",
+   "options": "http://127.0.0.1:8000/login#login",
+   "reqd": 0
+  }
+ ],
  "idx": 0,
- "modified": "2023-10-28 15:44:26.128213",
+ "modified": "2023-11-01 16:36:28.056348",
  "modified_by": "Administrator",
  "module": "Support",
  "name": "Agnikul Navbar",

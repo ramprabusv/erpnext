@@ -23,7 +23,7 @@
 					callback: function (r) {
 						frappe.msgprint(r.message)
 						setTimeout(function () {
-							window.location.href = 'http://127.0.0.1:8000/app/agkl-contractors';
+							window.location.href = 'http://127.0.0.1:8000/svr';
 
 						}, 2000);
 					}
@@ -58,7 +58,7 @@
 					callback: function (r) {
 						frappe.msgprint(r.message)
 						setTimeout(function () {
-							window.location.href = 'http://127.0.0.1:8000/app/agkl-contractors';
+							window.location.href = 'http://127.0.0.1:8000/svr';
 
 						}, 2000);
 

@@ -150,18 +150,6 @@
   
       
 
-//         // Create a new Frappe scanner instance inside the custom container
-//         // const scanVar = new frappe.ui.Scanner({
-//         //     // parent: scannerDialog, // Set the parent to the custom container
-//         //     dialog: true, // Do not open the scanner in a dialog
-//         //     multiple: false, // Stop after scanning one value
-//         //     on_scan(data) {
-//         //         var nameWorker = data.decodedText;
-
-//         //         frappe.msgprint(nameWorker)
-//         //             }
-//         //         });
-//         //     }
 //         // });
 //     //     frappe.msgprint(
 //     //         `
@@ -179,29 +167,5 @@
 //     //         "Your Custom Dialog Title"
 //     //     );
 
-//         // showOverlay();
-//         // frappe.msgprint("overlay of message").$wrapper.css({
-//         //     'color': 'red',
-//         //     'background-color': 'yellow',
-//         //     'border': '10px solid blue',
-//         //     'text-align':'center',
-//         //     'font-family': 'verdana',
-//         //     'font-size': '40px',
-//         //     // 'opacity':'0.5',
-//         //     // 'width':'800px',
-//         //     // 'margin':'30px',
-//         //     'padding':'40px'
-//         //     // Add more CSS rules here
-//         // });
 
-//         // setTimeout(function () {
-//         //     // window.location.href = 'http://127.0.0.1:8000/agkl-maintenance';
-//         //     // hideOverlay();
-//         //     frappe.msgprint("overlay of message");
-
-//         // }, 5000);
-
-  
-
-// // Define a function to show the overlay
 
