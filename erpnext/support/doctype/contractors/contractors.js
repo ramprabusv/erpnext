@@ -2,14 +2,18 @@
 // // For license information, please see license.txt
 
 // frappe.ui.form.on("Contractors", {
-// refresh (frm) {
+// after_save (frm) {
 //     frm.call({
 //         doc:frm.doc,
-//         method: 'frm_call',
-//         callback: function(r){
-//             frappe.msgprint(r.message)
-//         }
-//     });
+//         method: route_fn,
+//         // callback:function(r){
+//         //     frappe.msgprint(r.message)
+//         // }
+
+//     })
+
+    
+    
 // }
 // })
    

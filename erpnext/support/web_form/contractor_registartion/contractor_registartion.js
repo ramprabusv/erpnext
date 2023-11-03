@@ -14,6 +14,18 @@ frappe.ready(function() {
                 'border': '10px solid #ffa500',
                 'border-radius': '5px',
             });
+            // frappe.msgprint({
+            //     title: __('Notification'),
+            //     message: __('Are you sure you want to proceed?'),
+            //     primary_action: {
+            //     'label': 'Proceed',
+            //     // either one of the actions can be passed
+            //     'server_action': 'erpnext.support.web_form.contractor_registartion.contractor_registartion.get_context',
+            //     // 'client_action': 'dotted_path.to_method',
+            //     // 'args': {context:"123"
+            //     // }
+            //     }
+            // });
    
 
 }) 

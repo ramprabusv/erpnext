@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "autoname": "format:AGKL-{department_code}-{####}",
  "creation": "2023-10-26 12:31:19.707596",
@@ -15,6 +16,8 @@
   "current_address",
   "contact_number",
   "aadhar_number",
+  "route",
+  "published",
   "department_and_location_details_tab",
   "section_break_jfxd7",
   "working_under",
@@ -228,11 +231,26 @@
    "fieldname": "department_and_location_details_tab",
    "fieldtype": "Tab Break",
    "label": "Work details"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route",
+   "report_hide": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Published"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "published",
  "links": [],
- "modified": "2023-10-28 12:38:49.867483",
+ "modified": "2023-11-02 13:49:51.136137",
  "modified_by": "Administrator",
  "module": "Support",
  "name": "Contractors",
@@ -252,6 +270,7 @@
    "write": 1
   }
  ],
+ "route": "contractors",
  "search_fields": "name_of_the_worker",
  "sort_field": "modified",
  "sort_order": "DESC",

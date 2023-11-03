@@ -1,0 +1,42 @@
+<style>
+	.table{
+		text-align: center;
+	}
+	.contractors{
+		/* text-align: center; */
+		tab-size: 50px;
+		/* display: table-cell; */
+    padding: 20px;
+    border: 1px solid black; 
+	font-size: larger;
+	}
+	.contractor_link{
+		font-size: x-large;
+	}
+</style>
+<div class="table">
+	<!-- <h1>Contractors Master List</h1> -->
+	
+	<a href="{{ doc.route }}" class="contractor_link"\t><strong>Contractor ID:</strong> {{ doc.title or doc.name }} </a>
+	<p class="contractors">
+		&nbsp; <strong>Name:</strong> {{doc.name_of_the_worker }}
+		&nbsp; <strong>Department:</strong> {{doc.working_under }}
+		&nbsp; <strong>Site:</strong> {{doc.location_of_work}} &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp; <strong>Aadhar:</strong> {{doc.aadhar_number}}
+		&nbsp; <strong>Ph no:</strong> {{doc.contact_number}} <br>
+		&nbsp; <strong>Route:</strong> {{doc.route}} <br>
+		
+		&nbsp; <strong>Address:</strong> {{doc.current_address}} <br>
+		&nbsp; <strong>Food Preference</strong> <br>
+		&nbsp; <strong>Breakfast:</strong> {{doc.breakfast }}
+		&nbsp; <strong>Lunch:</strong> {{doc.lunch}}
+		&nbsp; <strong>Dinner:</strong> {{doc.dinner}}
+	</p>
+	
+	
+	  
+	
+	
+</div>
+<br>
+<!-- this is a sample default list template -->

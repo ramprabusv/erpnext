@@ -5,7 +5,6 @@
  "doctype": "Web Template",
  "fields": [
   {
-   "__unsaved": 1,
    "fieldname": "login",
    "fieldtype": "Link",
    "label": "Login",
@@ -13,8 +12,8 @@
    "reqd": 0
   }
  ],
- "idx": 0,
- "modified": "2023-11-01 16:36:28.056348",
+ "idx": 1,
+ "modified": "2023-11-02 18:57:00.548296",
  "modified_by": "Administrator",
  "module": "Support",
  "name": "Agnikul Navbar",

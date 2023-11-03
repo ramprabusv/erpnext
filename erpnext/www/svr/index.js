@@ -17,8 +17,6 @@
 					args: {
 						name_worker: content,
 						entry_or_exit: "Entry",
-
-
 					},
 					callback: function (r) {
 						frappe.msgprint(r.message)
